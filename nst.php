@@ -37,10 +37,10 @@ else
 {
 		echo "\e[96m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";	
 		echo "\e[91m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
-		echo "\e[96m[🚫]      \e[91mMasukkan User Registrasi  \e[96m [🚫]\n";
+		echo "\e[96m[🚫]      \e[91mMasukkan User Registrasi   \e[96m [🚫]\n";
 	        echo "\e[96m[🚫]            \e[91m⚠️ WARNING ⚠️        \e[96m [🚫]\n";
-		echo "\e[96m[🚫]         \e[91mSEGERA MINTA IZIN      \e[96m [🚫]\n";
-	        echo "\e[96m[🚫]           \e [91m@bayo Termux        \e[96m [🚫]\n";
+		echo "\e[96m[🚫]          \e[91mSEGERA MINTA IZIN      \e[96m [🚫]\n";
+	        echo "\e[96m[🚫]             \e[91m@bayo Termux        \e[96m [🚫]\n";
 		echo "\e[91m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
 goto login;
 }
@@ -110,7 +110,7 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         echo "\n".color("yellow","⏳▶️ Sabar");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(03);
+        sleep(04);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"EBADAHMAKANA"}');
         $message = fetch_value($code1,'"message":"','"');
@@ -124,7 +124,7 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         echo "\n".color("yellow","⏳▶️ Sabar");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(03);
+        sleep(05);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"EBADAHMAKANB"}');
         $message = fetch_value($code1,'"message":"','"');
@@ -133,13 +133,13 @@ echo "\e[89m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         echo "\n".color("yellow","⏳▶️ Sabar");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(03);
+        sleep(05);
         }
-        sleep(03);
+        sleep(05);
         $boba09 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code"KIRIMPARSEL"}');
         $messageboba09 = fetch_value($boba09,'"message":"','"');
         echo "\n".color("green","🔓▶️ Message: ".$messageboba09);
-        sleep(02);
+        sleep(03);
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=13&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
         $voucher1  = getStr1('"title":"','",',$cekvoucher,"1");
